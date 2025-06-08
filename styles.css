@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); /* 700 for bold */
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body styles */
+body {
+  background: linear-gradient(45deg, #A8E6CF, #D1C4E9); /* Mint and Lavender gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Calculator container */
+.calculator {
+  background: #E8F5E9; /* Light Mint color */
+  border: 2px solid #388E3C; /* Darker mint border for clarity */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.calculator:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Display screen */
+.screen {
+  margin-bottom: 20px;
+}
+
+#result {
+  width: 100%;
+  height: 60px;
+  text-align: right;
+  font-size: 32px;
+  background-color: lightcoral; /* Light pastel background */
+  border: 1px solid #F08080;
+  color: #333;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent text wrapping */
+  direction: rtl; /* Align the text to the right */
+}
+
+/* Calculator buttons - Sectional Grouping */
+.buttons {
+  display: grid;
+  grid-template-areas:
+    "num num num operator"
+    "num num num operator"
+    "num num num operator"
+    "clear clear equals equals";
+  gap: 10px;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.btn {
+  background: linear-gradient(135deg, #E8F5E9, #C8E6C9); /* Subtle gradient */
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #A5D6A7;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #C8E6C9, #A2C8B4); /* Gradient shift */
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.btn:active {
+  background: #A2C8B4; /* Pressed button */
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+}
